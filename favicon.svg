@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0A1A0F"/>
+      <stop offset="100%" stop-color="#071008"/>
+    </linearGradient>
+    <linearGradient id="ball" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#E8F4E8"/>
+      <stop offset="100%" stop-color="#C8DCC8"/>
+    </linearGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00FF87"/>
+      <stop offset="100%" stop-color="#00B85A"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="0.9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background rounded rect -->
+  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
+
+  <!-- Football (soccer ball) centered -->
+  <circle cx="16" cy="15" r="9.5" fill="url(#ball)" filter="url(#glow)"/>
+
+  <!-- Pentagon patches on ball (classic black patches) -->
+  <!-- Center top patch -->
+  <polygon points="16,7 18.5,9.3 17.5,12.3 14.5,12.3 13.5,9.3" fill="#1A2A1A" opacity="0.85"/>
+  <!-- Bottom-left patch -->
+  <polygon points="9.5,13 12,11.2 13.5,13.8 11.8,16 9.2,15.5" fill="#1A2A1A" opacity="0.85"/>
+  <!-- Bottom-right patch -->
+  <polygon points="22.5,13 20,11.2 18.5,13.8 20.2,16 22.8,15.5" fill="#1A2A1A" opacity="0.85"/>
+  <!-- Bottom patch -->
+  <polygon points="16,23 13.5,20.7 14.5,18 17.5,18 18.5,20.7" fill="#1A2A1A" opacity="0.85"/>
+
+  <!-- VPN shield badge (bottom-right corner) -->
+  <circle cx="25" cy="25" r="6.5" fill="#0A1A0F" stroke="#00FF87" stroke-width="1"/>
+  <path d="M25 20 L30 22.2 L30 26 Q30 30 25 31.5 Q20 30 20 26 L20 22.2 Z" fill="url(#shield)" opacity="0.9" filter="url(#glow)"/>
+  <!-- V letter in shield -->
+  <text x="25" y="28" text-anchor="middle" font-family="'Plus Jakarta Sans',Arial,sans-serif" font-weight="900" font-size="5.5" fill="#0A1A0F">V</text>
+</svg>
